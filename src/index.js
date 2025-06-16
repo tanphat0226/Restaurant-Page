@@ -3,6 +3,10 @@ import homeSectionDOM from './home'
 import menuSectionDOM from './menu'
 import aboutSectionDOM from './about'
 
+if (process.env.NODE_ENV !== 'production') {
+	console.log('Looks like we are in development mode!')
+}
+
 function toggleMobileMenu() {
 	const menu = document.getElementById('mobile-menu')
 	if (menu.style.display === 'block') {
